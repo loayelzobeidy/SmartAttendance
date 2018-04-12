@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "336438247597",
+    "firebase_url": "https://smartattend-f3c5a.firebaseio.com",
+    "project_id": "smartattend-f3c5a",
+    "storage_bucket": "smartattend-f3c5a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:336438247597:android:70ba642572cc22a3",
+        "android_client_info": {
+          "package_name": "com.example.almgohar.iottrilaterationproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "336438247597-putlgpdh47te4g0f80177jbhclfln1f6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2NPniE-tBmlJVk6oDPFqUcTyLzuXQWaU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

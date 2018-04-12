@@ -12,6 +12,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import org.altbeacon.beacon.Beacon;
 import org.altbeacon.beacon.BeaconConsumer;
 import org.altbeacon.beacon.BeaconManager;
@@ -108,12 +111,22 @@ public class BeaconService extends Service implements BeaconConsumer {
                                                                            CharSequence text = "Hello toast!";
                                                                            if(timeInTutorialSoFar >= 1000*20){
                                                                                text = "You attended the tutorial and time spent was "+timeInTutorialSoFar/1000;
+                                                                               FirebaseDatabase database = FirebaseDatabase.getInstance();
+                                                                               DatabaseReference myRef = database.getReference("message");
+
+                                                                               myRef.setValue(text);
                                                                            }
                                                                            else
                                                                                text = "You missed the attendance and time spent was "+timeInTutorialSoFar/1000;
                                                                            int duration = Toast.LENGTH_LONG;
                                                                            Toast toast = Toast.makeText(BeaconService.this.getApplicationContext(), text,duration);
                                                                            toast.show();
+                                                                           FirebaseDatabase database = FirebaseDatabase.getInstance();
+                                                                           DatabaseReference myRef = database.getReference("message");
+
+                                                                           myRef.setValue(text);
+
+
                                                                        }
                                                                    });
                                                                }
@@ -185,6 +198,7 @@ public class BeaconService extends Service implements BeaconConsumer {
                                                                        CharSequence text = "You are in the tutorial now and time is counting to:  " + connectedTo;
                                                                        int duration = Toast.LENGTH_LONG;
                                                                        Log.i("connected ", text + "");
+
                                                                        Handler handler = new Handler(Looper.getMainLooper());
                                                                        handler.post(new Runnable() {
                                                                            @Override
