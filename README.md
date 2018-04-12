@@ -6,6 +6,5 @@
 
 
 
-```FireBase
-// Example for Redis Hashe
+##FireBase
 using firebase as a realtime database to write on it the attendance feedback.
