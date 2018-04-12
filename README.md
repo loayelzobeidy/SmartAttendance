@@ -6,8 +6,6 @@
 
 
 
-```java
-// Example for Redis Hashes
-jedis.hset("user#1", "sender", "Peter");
-String name = jedis.hget("user#1", "sender");
-```
+```FireBase
+// Example for Redis Hashe
+using firebase as a realtime database to write on it the attendance feedback.
